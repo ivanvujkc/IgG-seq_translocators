@@ -4,5 +4,6 @@ Presented are scripts performing core tasks in the study "Systemic IgG repertoir
 
 
 IgA or IgG-seq on paired samples.R: IgG/IgA score calculation using paired serum and stool
+
 SFC-IgG-seq IgG scores.R: IgG score calculation using surrogate fecal community (SFC)
 
