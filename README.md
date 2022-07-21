@@ -7,3 +7,4 @@ IgA or IgG-seq on paired samples.R: IgG/IgA score calculation using paired serum
 
 SFC-IgG-seq IgG scores.R: IgG score calculation using surrogate fecal community (SFC)
 
+human_IgA_autologous IgG_relab comparisons.R: calculations of mucosal IgA scores, autologous IgG scores, and comparisons to fecal relative abundance in 12 healthy human volunteers, data shown in Figure 1
