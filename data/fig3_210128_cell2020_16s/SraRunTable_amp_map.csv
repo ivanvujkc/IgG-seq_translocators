@@ -1,0 +1,77 @@
+Run,Bases,Collection_Date,env_broad_scale,env_local_scale,env_medium,Library Name,Sample Name,PID,grp1,muc
+SRR12537855,1272500,29-Aug-17,Crohn's disease,Involved mucosa,Ileal mucosa,CD5-INV-MUC,16S-CD05-INV-MUC,CD5,INV,MUC
+SRR12537856,2773500,29-Aug-17,Crohn's disease,Creeping fat,Mesenteric adipose tissue,CD5-CrF,16S-CD05-CrF,CD5,CrF,
+SRR12537857,14089500,23-Jan-18,Ulcerative colitis,Uninvolved mucosa,Colonic mucosa,UC09-UN-MUC,16S-UC09-UN-MUC,UC09,UN,MUC
+SRR12537858,1273500,23-Jan-18,Ulcerative colitis,Uninvolved mesenteric adipose tissue,Mesenteric adipose tissue,UC09-MAT,16S-UC09-MAT,UC09,MAT,
+SRR12537859,6256500,23-Jan-18,Ulcerative colitis,Involved mucosa,Colonic mucosa,UC09-INV-MUC,16S-UC09-INV-MUC,UC09,INV,MUC
+SRR12537860,1220000,23-Jan-18,Ulcerative colitis,Involved mesenteric adipose tissue,Mesenteric adipose tissue,UC09-iMAT,UC09-iMAT,UC09,iMAT,
+SRR12537861,10588000,16-Jan-18,Ulcerative colitis,Uninvolved mucosa,Colonic mucosa,UC08-UN-MUC,16S-UC08-UN-MUC,UC08,UN,MUC
+SRR12537862,1823000,16-Jan-18,Ulcerative colitis,Uninvolved mesenteric adipose tissue,Mesenteric adipose tissue,UC08-MAT,16S-UC08-MAT,UC08,MAT,
+SRR12537863,4871500,23-Jun-17,Crohn's disease,Uninvolved mucosa,Ileal mucosa,CD4-UN-MUC,16S-CD04-UN-MUC,CD4,UN,MUC
+SRR12537864,5009500,16-Jan-18,Ulcerative colitis,Involved mucosa,Colonic mucosa,UC08-INV-MUC,16S-UC08-INV-MUC,UC08,INV,MUC
+SRR12537865,1556500,16-Jan-18,Ulcerative colitis,Involved mesenteric adipose tissue,Mesenteric adipose tissue,UC08-iMAT,UC08-iMAT,UC08,iMAT,
+SRR12537866,12451500,9-Jan-18,Ulcerative colitis,Uninvolved mucosa,Colonic mucosa,UC07-UN-MUC,16S-UC07-UN-MUC,UC07,UN,MUC
+SRR12537867,1103500,9-Jan-18,Ulcerative colitis,Uninvolved mesenteric adipose tissue,Mesenteric adipose tissue,UC07-MAT,16S-UC07-MAT,UC07,MAT,
+SRR12537868,7183500,9-Jan-18,Ulcerative colitis,Involved mucosa,Colonic mucosa,UC07-INV-MUC,16S-UC07-INV-MUC,UC07,INV,MUC
+SRR12537869,2657500,9-Jan-18,Ulcerative colitis,Involved mesenteric adipose tissue,Mesenteric adipose tissue,UC07-iMAT,UC07-iMAT,UC07,iMAT,
+SRR12537870,4594000,12-Dec-17,Ulcerative colitis,Uninvolved mucosa,Colonic mucosa,UC06-UN-MUC,16S-UC06-UN-MUC,UC06,UN,MUC
+SRR12537871,1922000,12-Dec-17,Ulcerative colitis,Uninvolved mesenteric adipose tissue,Mesenteric adipose tissue,UC06-MAT,16S-UC06-MAT,UC06,MAT,
+SRR12537872,2798500,12-Dec-17,Ulcerative colitis,Involved mucosa,Colonic mucosa,UC06-INV-MUC,16S-UC06-INV-MUC,UC06,INV,MUC
+SRR12537873,1751500,12-Dec-17,Ulcerative colitis,Involved mesenteric adipose tissue,Mesenteric adipose tissue,UC06-iMAT,UC06-iMAT,UC06,iMAT,
+SRR12537874,3896000,23-Jun-17,Crohn's disease,Uninvolved mesenteric adipose tissue,Mesenteric adipose tissue,CD4-MAT,16S-CD04-MAT,CD4,MAT,
+SRR12537875,3506000,20-Jun-17,Ulcerative colitis,Uninvolved mucosa,Colonic mucosa,UC05-UN-MUC,16S-UC05-UN-MUC,UC05,UN,MUC
+SRR12537876,2958000,20-Jun-17,Ulcerative colitis,Uninvolved mesenteric adipose tissue,Mesenteric adipose tissue,UC05-MAT,16S-UC05-MAT,UC05,MAT,
+SRR12537877,3733500,20-Jun-17,Ulcerative colitis,Involved mucosa,Colonic mucosa,UC05-INV-MUC,16S-UC05-INV-MUC,UC05,INV,MUC
+SRR12537878,3761000,20-Jun-17,Ulcerative colitis,Involved mesenteric adipose tissue,Mesenteric adipose tissue,UC05-iMAT,UC05-iMAT,UC05,iMAT,
+SRR12537879,10932500,13-Jun-17,Ulcerative colitis,Uninvolved mucosa,Colonic mucosa,UC04-UN-MUC,16S-UC04-UN-MUC,UC04,UN,MUC
+SRR12537880,13125000,13-Jun-17,Ulcerative colitis,Uninvolved mesenteric adipose tissue,Mesenteric adipose tissue,UC04-MAT,16S-UC04-MAT,UC04,MAT,
+SRR12537881,11041500,13-Jun-17,Ulcerative colitis,Involved mucosa,Colonic mucosa,UC04-INV-MUC,16S-UC04-INV-MUC,UC04,INV,MUC
+SRR12537882,10809500,13-Jun-17,Ulcerative colitis,Involved mesenteric adipose tissue,Mesenteric adipose tissue,UC04-iMAT,UC04-iMAT,UC04,iMAT,
+SRR12537883,3000000,2-Jun-17,Ulcerative colitis,Uninvolved mucosa,Colonic mucosa,UC03-UN-MUC,16S-UC03-UN-MUC,UC03,UN,MUC
+SRR12537884,1921500,2-Jun-17,Ulcerative colitis,Uninvolved mesenteric adipose tissue,Mesenteric adipose tissue,UC03-MAT,16S-UC03-MAT,UC03,MAT,
+SRR12537885,5679000,23-Jun-17,Crohn's disease,Involved mucosa,Ileal mucosa,CD4-INV-MUC,16S-CD04-INV-MUC,CD4,INV,MUC
+SRR12537886,5671000,2-Jun-17,Ulcerative colitis,Involved mucosa,Colonic mucosa,UC03-INV-MUC,16S-UC03-INV-MUC,UC03,INV,MUC
+SRR12537887,648000,2-Jun-17,Ulcerative colitis,Involved mesenteric adipose tissue,Mesenteric adipose tissue,UC03-iMAT,UC03-iMAT,UC03,iMAT,
+SRR12537888,3397500,18-Apr-17,Ulcerative colitis,Uninvolved mucosa,Colonic mucosa,UC02-UN-MUC,16S-UC02-UN-MUC,UC02,UN,MUC
+SRR12537889,4836000,18-Apr-17,Ulcerative colitis,Uninvolved mesenteric adipose tissue,Mesenteric adipose tissue,UC02-MAT,16S-UC02-MAT,UC02,MAT,
+SRR12537890,3678500,18-Apr-17,Ulcerative colitis,Involved mucosa,Colonic mucosa,UC02-INV-MUC,16S-UC02-INV-MUC,UC02,INV,MUC
+SRR12537891,5719000,18-Apr-17,Ulcerative colitis,Involved mesenteric adipose tissue,Mesenteric adipose tissue,UC02-iMAT,UC02-iMAT,UC02,iMAT,
+SRR12537892,5993000,11-Apr-17,Ulcerative colitis,Uninvolved mucosa,Colonic mucosa,UC01-UN-MUC,16S-UC01-UN-MUC,UC01,UN,MUC
+SRR12537893,5702000,11-Apr-17,Ulcerative colitis,Uninvolved mesenteric adipose tissue,Mesenteric adipose tissue,UC01-MAT,16S-UC01-MAT,UC01,MAT,
+SRR12537894,5306000,11-Apr-17,Ulcerative colitis,Involved mucosa,Colonic mucosa,UC01-INV-MUC,16S-UC01-INV-MUC,UC01,INV,MUC
+SRR12537895,6926500,11-Apr-17,Ulcerative colitis,Involved mesenteric adipose tissue,Mesenteric adipose tissue,UC01-iMAT,UC01-iMAT,UC01,iMAT,
+SRR12537896,7986000,23-Jun-17,Crohn's disease,Creeping fat,Mesenteric adipose tissue,CD4-CrF,16S-CD04-CrF,CD4,CrF,
+SRR12537897,15538500,27-Feb-17,Crohn's disease,Uninvolved mucosa,Ileal mucosa,CD15-UN-MUC,16S-CD15-UN-MUC,CD15,UN,MUC
+SRR12537898,1346000,27-Feb-17,Crohn's disease,Uninvolved mesenteric adipose tissue,Mesenteric adipose tissue,CD15-MAT,16S-CD15-MAT,CD15,MAT,
+SRR12537899,21614000,27-Feb-17,Crohn's disease,Involved mucosa,Ileal mucosa,CD15-INV-MUC,16S-CD15-INV-MUC,CD15,INV,MUC
+SRR12537900,2825500,27-Feb-17,Crohn's disease,Creeping fat,Mesenteric adipose tissue,CD15-CrF,16S-CD15-CrF,CD15,CrF,
+SRR12537901,2222000,22-Dec-17,Crohn's disease,Uninvolved mucosa,Ileal mucosa,CD14-UN-MUC,16S-CD14-UN-MUC,CD14,UN,MUC
+SRR12537902,1132000,22-Dec-17,Crohn's disease,Uninvolved mesenteric adipose tissue,Mesenteric adipose tissue,CD14-MAT,16S-CD14-MAT,CD14,MAT,
+SRR12537903,998500,22-Dec-17,Crohn's disease,Involved mucosa,Ileal mucosa,CD14-INV-MUC,16S-CD14-INV-MUC,CD14,INV,MUC
+SRR12537904,1961500,22-Dec-17,Crohn's disease,Creeping fat,Mesenteric adipose tissue,CD14-CrF,16S-CD14-CrF,CD14,CrF,
+SRR12537905,10849500,14-Nov-17,Crohn's disease,Uninvolved mucosa,Ileal mucosa,CD11-UN-MUC,16S-CD11-UN-MUC,CD11,UN,MUC
+SRR12537906,7650000,14-Nov-17,Crohn's disease,Uninvolved mesenteric adipose tissue,Mesenteric adipose tissue,CD11-MAT,16S-CD11-MAT,CD11,MAT,
+SRR12537907,11314500,6-Jun-17,Crohn's disease,Uninvolved mucosa,Ileal mucosa,CD3-UN-MUC,16S-CD03-UN-MUC,CD3,UN,MUC
+SRR12537908,11927500,14-Nov-17,Crohn's disease,Involved mucosa,Ileal mucosa,CD11-INV-MUC,16S-CD11-INV-MUC,CD11,INV,MUC
+SRR12537909,2806000,14-Nov-17,Crohn's disease,Creeping fat,Mesenteric adipose tissue,CD11-CrF,16S-CD11-CrF,CD11,CrF,
+SRR12537910,5457000,31-Oct-17,Crohn's disease,Uninvolved mucosa,Ileal mucosa,CD10-UN-MUC,16S-CD10-UN-MUC,CD10,UN,MUC
+SRR12537911,1259500,31-Oct-17,Crohn's disease,Uninvolved mesenteric adipose tissue,Mesenteric adipose tissue,CD10-MAT,16S-CD10-MAT,CD10,MAT,
+SRR12537912,9265000,31-Oct-17,Crohn's disease,Involved mucosa,Ileal mucosa,CD10-INV-MUC,16S-CD10-INV-MUC,CD10,INV,MUC
+SRR12537913,1525500,31-Oct-17,Crohn's disease,Creeping fat,Mesenteric adipose tissue,CD10-CrF,16S-CD10-CrF,CD10,CrF,
+SRR12537914,11504500,27-Oct-17,Crohn's disease,Uninvolved mucosa,Ileal mucosa,CD8-UN-MUC,16S-CD08-UN-MUC,CD8,UN,MUC
+SRR12537915,7674500,27-Oct-17,Crohn's disease,Uninvolved mesenteric adipose tissue,Mesenteric adipose tissue,CD8-MAT,16S-CD08-MAT,CD8,MAT,
+SRR12537916,3666500,27-Oct-17,Crohn's disease,Involved mucosa,Ileal mucosa,CD8-INV-MUC,16S-CD08-INV-MUC,CD8,INV,MUC
+SRR12537917,1175000,27-Oct-17,Crohn's disease,Creeping fat,Mesenteric adipose tissue,CD8-CrF,16S-CD08-CrF,CD8,CrF,
+SRR12537918,6269500,6-Jun-17,Crohn's disease,Uninvolved mesenteric adipose tissue,Mesenteric adipose tissue,CD3-MAT,16S-CD03-MAT,CD3,MAT,
+SRR12537919,13427000,8-Sep-17,Crohn's disease,Uninvolved mucosa,Ileal mucosa,CD7-UN-MUC,16S-CD07-UN-MUC,CD7,UN,MUC
+SRR12537920,1306500,8-Sep-17,Crohn's disease,Uninvolved mesenteric adipose tissue,Mesenteric adipose tissue,CD7-MAT,16S-CD07-MAT,CD7,MAT,
+SRR12537921,5711000,8-Sep-17,Crohn's disease,Involved mucosa,Ileal mucosa,CD7-INV-MUC,16S-CD07-INV-MUC,CD7,INV,MUC
+SRR12537922,2005000,8-Sep-17,Crohn's disease,Creeping fat,Mesenteric adipose tissue,CD7-CrF,16S-CD07-CrF,CD7,CrF,
+SRR12537923,1873500,Aug-17,Crohn's disease,Uninvolved mucosa,Ileal mucosa,CD6-UN-MUC,16S-CD06-UN-MUC,CD6,UN,MUC
+SRR12537924,2228000,Aug-17,Crohn's disease,Uninvolved mesenteric adipose tissue,Mesenteric adipose tissue,CD6-MAT,16S-CD06-MAT,CD6,MAT,
+SRR12537925,4435500,Aug-17,Crohn's disease,Involved mucosa,Ileal mucosa,CD6-INV-MUC,16S-CD06-INV-MUC,CD6,INV,MUC
+SRR12537926,1023000,Aug-17,Crohn's disease,Creeping fat,Mesenteric adipose tissue,CD6-CrF,16S-CD06-CrF,CD6,CrF,
+SRR12537927,1438500,29-Aug-17,Crohn's disease,Uninvolved mucosa,Ileal mucosa,CD5-UN-MUC,16S-CD05-UN-MUC,CD5,UN,MUC
+SRR12537928,3139000,29-Aug-17,Crohn's disease,Uninvolved mesenteric adipose tissue,Mesenteric adipose tissue,CD5-MAT,16S-CD05-MAT,CD5,MAT,
+SRR12537929,7210500,6-Jun-17,Crohn's disease,Involved mucosa,Ileal mucosa,CD3-INV-MUC,16S-CD03-INV-MUC,CD3,INV,MUC
+SRR12537930,8126000,6-Jun-17,Crohn's disease,Creeping fat,Mesenteric adipose tissue,CD3-CrF,16S-CD03-CrF,CD3,CrF,

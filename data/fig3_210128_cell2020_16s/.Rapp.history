@@ -1,0 +1,884 @@
+head(m6bresc2)
+m6bresc2[,1]
+as.data.frame(m6bresc2)
+m6bresc3<-as.data.frame(m6bresc2)
+m6bresc3[,1]
+i=1
+as.numeric(m6bresc3[,i])
+(m6bresc3[,i])
+for(i in 1:(ncol(m6bresc)-1))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}
+m6bresc2<-m6bresc[,colnames(m6bresc)%in%colnames(m6monz2)]#
+m6bresc3<-as.data.frame(m6bresc2)#
+for(i in 1:(ncol(m6bresc)-1))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}
+for(i in 1:(ncol(m6bresc3)-1))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}
+m6bresc2<-m6bresc[,colnames(m6bresc)%in%colnames(m6monz2)]#
+m6bresc3<-as.data.frame(m6bresc2)#
+for(i in 1:(ncol(m6bresc3)-1))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}
+m6bresc3<-as.data.frame(m6bresc2)#
+for(i in 1:(ncol(m6bresc3)-1))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}#
+m6monz3<-as.data.frame(m6monz2)#
+for(i in 1:(ncol(m6monz3)-1))#
+{#
+	m6monz3[,i]<-as.numeric(m6monz3[,i])#
+}
+randomForest(clinordinal ~ ., data= m6bresc3, ntree=1000,mtry=50, importance=TRUE)
+randomForest(clinordinal ~ ., data= m6bresc3, ntree=200, importance=TRUE)
+m6bresc3[,1:200]<-m6bresc3[,1:200]+m6bresc3$clinordinal
+randomForest(clinordinal ~ ., data= m6bresc3, ntree=200, importance=TRUE)
+for(i in 1:(ncol(m6bresc3)-1))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}#
+m6monz3<-as.data.frame(m6monz2)#
+for(i in 1:(ncol(m6monz3)-1))#
+{#
+	m6monz3[,i]<-as.numeric(m6monz3[,i])#
+}
+m6bresc3<-as.data.frame(m6bresc2)#
+for(i in 1:(ncol(m6bresc3)-1))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}#
+m6monz3<-as.data.frame(m6monz2)#
+for(i in 1:(ncol(m6monz3)-1))#
+{#
+	m6monz3[,i]<-as.numeric(m6monz3[,i])#
+}
+prediction_for_roc_curve <- predict(rf_classifier, m6monz3[,-ncol(m6monz3)])
+plot(prediction_for_roc_curve, m6monz3$clinordinal)
+randomForest(clinordinal ~ ., data= m6bresc3, ntree=200, importance=TRUE)
+m6bresc3$clinordinal
+m6monz3$clinordinal
+prediction_for_roc_curve <- predict(rf_classifier, m6monz3[,-ncol(m6monz3)])
+plot(prediction_for_roc_curve, m6monz3$clinordinal)
+m6monz3$clinordinal
+prediction_for_roc_curve
+rf_classifier = randomForest(clinordinal ~ ., data= m6bresc3, ntree=200, importance=TRUE)
+prediction_for_roc_curve <- predict(rf_classifier, m6monz3[,-ncol(m6monz3)])
+plot(prediction_for_roc_curve, m6monz3$clinordinal)
+m6bresc3[,1:200]<-m6bresc3[,1:200]+m6bresc3$clinordinal
+rf_classifier = randomForest(clinordinal ~ ., data= m6bresc3, ntree=200, importance=TRUE)
+randomForest(clinordinal ~ ., data= m6bresc3, ntree=200, importance=TRUE)
+# colnames(m5bresc)[grep("X",colnames(m5bresc))]#
+m6bresc<-m5bresc[,c(colnames(m5bresc)[grep("X",colnames(m5bresc))],"clinordinal")]#
+m6bresc<-m6bresc[,!colnames(m6bresc)%in%"X"]#
+# m6bresc $clinordinal<-sample(m6bresc $clinordinal,size=nrow(m6bresc))#
+# colnames(m5monz)[grep("X",colnames(m5monz))]#
+m6monz<-m5monz[,c(colnames(m5monz)[grep("X",colnames(m5monz))],"clinordinal")]#
+m6monz<-m6monz[,!colnames(m6monz)%in%"X"]#
+m6monz2<-m6monz[,colnames(m6monz)%in%colnames(m6bresc)]#
+m6bresc2<-m6bresc[,colnames(m6bresc)%in%colnames(m6monz2)]#
+m6bresc3<-as.data.frame(m6bresc2)#
+for(i in 1:(ncol(m6bresc3)-1))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}#
+m6monz3<-as.data.frame(m6monz2)#
+for(i in 1:(ncol(m6monz3)-1))#
+{#
+	m6monz3[,i]<-as.numeric(m6monz3[,i])#
+}#
+ # m6bresc3[,1:200]<-m6bresc3[,1:200]+m6bresc3$clinordinal#
+m6bresc3$clinordinal<-as.factor(m6bresc3$clinordinal<2.9)#
+m6monz3$clinordinal<-as.factor(m6monz3$clinordinal<2.9)#
+# rf_classifier = #
+randomForest(clinordinal ~ ., data= m6bresc3, ntree=200, importance=TRUE)
+m6bresc3[,1:200]<-m6bresc3[,1:200]+m6bresc3$clinordinal
+m6bresc2<-m6bresc[,colnames(m6bresc)%in%colnames(m6monz2)]#
+m6bresc3<-as.data.frame(m6bresc2)#
+for(i in 1:(ncol(m6bresc3)-1))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}#
+m6monz3<-as.data.frame(m6monz2)#
+for(i in 1:(ncol(m6monz3)-1))#
+{#
+	m6monz3[,i]<-as.numeric(m6monz3[,i])#
+}#
+  m6bresc3[,1:200]<-m6bresc3[,1:200]+m6bresc3$clinordinal#
+m6bresc3$clinordinal<-as.factor(m6bresc3$clinordinal<2.9)#
+m6monz3$clinordinal<-as.factor(m6monz3$clinordinal<2.9)#
+# rf_classifier = #
+randomForest(clinordinal ~ ., data= m6bresc3, ntree=200, importance=TRUE)
+m6monz2<-m6monz[,colnames(m6monz)%in%colnames(m6bresc)]#
+m6bresc2<-m6bresc[,colnames(m6bresc)%in%colnames(m6monz2)]#
+m6bresc3<-as.data.frame(m6bresc2)#
+for(i in 1:(ncol(m6bresc3)-1))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}#
+m6monz3<-as.data.frame(m6monz2)#
+for(i in 1:(ncol(m6monz3)-1))#
+{#
+	m6monz3[,i]<-as.numeric(m6monz3[,i])#
+}#
+ # m6bresc3[,1:200]<-m6bresc3[,1:200]+m6bresc3$clinordinal#
+m6bresc3$clinordinal<-as.factor(m6bresc3$clinordinal<2.9)#
+m6monz3$clinordinal<-as.factor(m6monz3$clinordinal<2.9)#
+# rf_classifier = #
+randomForest(clinordinal ~ ., data= m6bresc3, ntree=200, importance=TRUE)
+comb<-rbind(m6bresc3 ,m6monz3[,colnames(m6bresc3)])
+randomForest(clinordinal ~ ., data= comb, ntree=200, importance=TRUE)
+m6monz3[,i]
+head(m6monz3)
+m6bresc3<-as.data.frame(m6bresc2)[,1:400]#
+for(i in 1:(ncol(m6bresc3)-1))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}#
+m6monz3<-as.data.frame(m6monz2)#
+for(i in 1:(ncol(m6monz3)-1))#
+{#
+	m6monz3[,i]<-as.numeric(m6monz3[,i])#
+}#
+ # m6bresc3[,1:200]<-m6bresc3[,1:200]+m6bresc3$clinordinal#
+m6bresc3$clinordinal<-as.factor(m6bresc3$clinordinal<2.9)#
+m6monz3$clinordinal<-as.factor(m6monz3$clinordinal<2.9)#
+# rf_classifier = #
+randomForest(clinordinal ~ ., data= m6bresc3, ntree=200, importance=TRUE)
+m6bresc3<-as.data.frame(m6bresc2)[,c(1:400,ncol(m6bresc3)]
+for(i in 1:(ncol(m6bresc3)-1))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}#
+m6monz3<-as.data.frame(m6monz2)#
+for(i in 1:(ncol(m6monz3)-1))#
+{#
+	m6monz3[,i]<-as.numeric(m6monz3[,i])#
+}#
+ # m6bresc3[,1:200]<-m6bresc3[,1:200]+m6bresc3$clinordinal#
+m6bresc3$clinordinal<-as.factor(m6bresc3$clinordinal<2.9)#
+m6monz3$clinordinal<-as.factor(m6monz3$clinordinal<2.9)#
+# rf_classifier = #
+randomForest(clinordinal ~ ., data= m6bresc3, ntree=200, importance=TRUE)
+m6bresc3<-as.data.frame(m6bresc2)[,c(1:400,ncol(m6bresc3))]
+for(i in 1:(ncol(m6bresc3)-1))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}#
+m6monz3<-as.data.frame(m6monz2)#
+for(i in 1:(ncol(m6monz3)-1))#
+{#
+	m6monz3[,i]<-as.numeric(m6monz3[,i])#
+}#
+ # m6bresc3[,1:200]<-m6bresc3[,1:200]+m6bresc3$clinordinal#
+m6bresc3$clinordinal<-as.factor(m6bresc3$clinordinal<2.9)#
+m6monz3$clinordinal<-as.factor(m6monz3$clinordinal<2.9)#
+# rf_classifier = #
+randomForest(clinordinal ~ ., data= m6bresc3, ntree=200, importance=TRUE)#
+comb<-rbind(m6bresc3 ,m6monz3[,colnames(m6bresc3)])
+head(m6bresc3)
+m6bresc2<-m6bresc[,colnames(m6bresc)%in%colnames(m6monz2)]
+m6bresc3<-as.data.frame(m6bresc2)[,c(1:400,ncol(m6bresc2))]
+for(i in 1:(ncol(m6bresc3)-1))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}#
+m6monz3<-as.data.frame(m6monz2)#
+for(i in 1:(ncol(m6monz3)-1))#
+{#
+	m6monz3[,i]<-as.numeric(m6monz3[,i])#
+}#
+ # m6bresc3[,1:200]<-m6bresc3[,1:200]+m6bresc3$clinordinal#
+m6bresc3$clinordinal<-as.factor(m6bresc3$clinordinal<2.9)#
+m6monz3$clinordinal<-as.factor(m6monz3$clinordinal<2.9)#
+# rf_classifier = #
+randomForest(clinordinal ~ ., data= m6bresc3, ntree=200, importance=TRUE)#
+comb<-rbind(m6bresc3 ,m6monz3[,colnames(m6bresc3)])#
+#
+library(ROCR)
+m6bresc2<-m6bresc[,colnames(m6bresc)%in%colnames(m6monz2)]#
+m6bresc3<-as.data.frame(m6bresc2)[,c(1:350,ncol(m6bresc2))]#
+for(i in 1:(ncol(m6bresc3)-1))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}#
+m6monz3<-as.data.frame(m6monz2)#
+for(i in 1:(ncol(m6monz3)-1))#
+{#
+	m6monz3[,i]<-as.numeric(m6monz3[,i])#
+}#
+ # m6bresc3[,1:200]<-m6bresc3[,1:200]+m6bresc3$clinordinal#
+m6bresc3$clinordinal<-as.factor(m6bresc3$clinordinal<2.9)#
+m6monz3$clinordinal<-as.factor(m6monz3$clinordinal<2.9)#
+# rf_classifier = #
+randomForest(clinordinal ~ ., data= m6bresc3, ntree=200, importance=TRUE)#
+comb<-rbind(m6bresc3 ,m6monz3[,colnames(m6bresc3)])
+m6monz2<-m6monz[,colnames(m6monz)%in%colnames(m6bresc)]#
+m6bresc2<-m6bresc[,colnames(m6bresc)%in%colnames(m6monz2)]#
+m6bresc3<-as.data.frame(m6bresc2)[,c(1:350,ncol(m6bresc2))]#
+for(i in 1:(ncol(m6bresc3)-1))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}#
+m6monz3<-as.data.frame(m6monz2)#
+for(i in 1:(ncol(m6monz3)-1))#
+{#
+	m6monz3[,i]<-as.numeric(m6monz3[,i])#
+}#
+ # m6bresc3[,1:200]<-m6bresc3[,1:200]+m6bresc3$clinordinal#
+# m6bresc3$clinordinal<-as.factor(m6bresc3$clinordinal<2.9)#
+# m6monz3$clinordinal<-as.factor(m6monz3$clinordinal<2.9)#
+# rf_classifier = #
+randomForest(clinordinal ~ ., data= m6bresc3, ntree=200, importance=TRUE)
+head(m6bresc3)
+m6bresc2<-m6bresc[,colnames(m6bresc)%in%colnames(m6monz2)]#
+m6bresc3<-as.data.frame(m6bresc2)[,c(1:350,ncol(m6bresc2))]#
+for(i in 1:ncol(m6bresc3))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}#
+m6monz3<-as.data.frame(m6monz2)#
+for(i in 1:(ncol(m6monz3)-1))#
+{#
+	m6monz3[,i]<-as.numeric(m6monz3[,i])#
+}#
+ # m6bresc3[,1:200]<-m6bresc3[,1:200]+m6bresc3$clinordinal#
+# m6bresc3$clinordinal<-as.factor(m6bresc3$clinordinal<2.9)#
+# m6monz3$clinordinal<-as.factor(m6monz3$clinordinal<2.9)#
+# rf_classifier = #
+randomForest(clinordinal ~ ., data= m6bresc3, ntree=200, importance=TRUE)
+m6bresc2<-m6bresc[,colnames(m6bresc)%in%colnames(m6monz2)]#
+m6bresc3<-as.data.frame(m6bresc2)#[,c(1:350,ncol(m6bresc2))]#
+for(i in 1:ncol(m6bresc3))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}#
+m6monz3<-as.data.frame(m6monz2)#
+for(i in 1:(ncol(m6monz3)-1))#
+{#
+	m6monz3[,i]<-as.numeric(m6monz3[,i])#
+}#
+ # m6bresc3[,1:200]<-m6bresc3[,1:200]+m6bresc3$clinordinal#
+# m6bresc3$clinordinal<-as.factor(m6bresc3$clinordinal<2.9)#
+# m6monz3$clinordinal<-as.factor(m6monz3$clinordinal<2.9)#
+# rf_classifier = #
+randomForest(clinordinal ~ ., data= m6bresc3, ntree=200, importance=TRUE)
+randomForest(clinordinal ~ ., data= m6bresc3, ntree=200, importance=TRUE)
+prediction_for_roc_curve <- predict(rf_classifier, m6monz3[,-ncol(m6monz3)])
+plot(prediction_for_roc_curve, m6monz3$clinordinal)
+m6bresc<-m5bresc[,c(colnames(m5bresc)[grep("X",colnames(m5bresc))],"clinordinal")]#
+m6bresc<-m6bresc[,!colnames(m6bresc)%in%"X"]#
+# m6bresc $clinordinal<-sample(m6bresc $clinordinal,size=nrow(m6bresc))#
+# colnames(m5monz)[grep("X",colnames(m5monz))]#
+m6monz<-m5monz[,c(colnames(m5monz)[grep("X",colnames(m5monz))],"clinordinal")]#
+m6monz<-m6monz[,!colnames(m6monz)%in%"X"]#
+m6monz2<-m6monz[,colnames(m6monz)%in%colnames(m6bresc)]#
+m6bresc2<-m6bresc[,colnames(m6bresc)%in%colnames(m6monz2)]#
+m6bresc3<-as.data.frame(m6bresc2)#[,c(1:350,ncol(m6bresc2))]#
+for(i in 1:ncol(m6bresc3))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}#
+m6monz3<-as.data.frame(m6monz2)#
+for(i in 1:(ncol(m6monz3)-1))#
+{#
+	m6monz3[,i]<-as.numeric(m6monz3[,i])#
+}#
+ # m6bresc3[,1:200]<-m6bresc3[,1:200]+m6bresc3$clinordinal#
+# m6bresc3$clinordinal<-as.factor(m6bresc3$clinordinal<2.9)#
+# m6monz3$clinordinal<-as.factor(m6monz3$clinordinal<2.9)#
+# rf_classifier = #
+randomForest(clinordinal ~ ., data= m6bresc3, ntree=200, importance=TRUE)#
+comb<-rbind(m6bresc3 ,m6monz3[,colnames(m6bresc3)])#
+#
+library(ROCR)#
+#
+# Calculate the probability of new observations belonging to each class#
+# prediction_for_roc_curve will be a matrix with dimensions data_set_size x number_of_classes#
+prediction_for_roc_curve <- predict(rf_classifier, m6monz3[,-ncol(m6monz3)])#
+plot(prediction_for_roc_curve, m6monz3$clinordinal)
+m6monz3$clinordinal
+rf_classifier
+# colnames(m5bresc)[grep("X",colnames(m5bresc))]#
+m6bresc<-m5bresc[,c(colnames(m5bresc)[grep("X",colnames(m5bresc))],"clinordinal")]#
+m6bresc<-m6bresc[,!colnames(m6bresc)%in%"X"]#
+# m6bresc $clinordinal<-sample(m6bresc $clinordinal,size=nrow(m6bresc))#
+# colnames(m5monz)[grep("X",colnames(m5monz))]#
+m6monz<-m5monz[,c(colnames(m5monz)[grep("X",colnames(m5monz))],"clinordinal")]#
+m6monz<-m6monz[,!colnames(m6monz)%in%"X"]#
+m6monz2<-m6monz[,colnames(m6monz)%in%colnames(m6bresc)]#
+m6bresc2<-m6bresc[,colnames(m6bresc)%in%colnames(m6monz2)]#
+m6bresc3<-as.data.frame(m6bresc2)#[,c(1:350,ncol(m6bresc2))]#
+for(i in 1:ncol(m6bresc3))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}#
+m6monz3<-as.data.frame(m6monz2)#
+for(i in 1:(ncol(m6monz3)-1))#
+{#
+	m6monz3[,i]<-as.numeric(m6monz3[,i])#
+}#
+ # m6bresc3[,1:200]<-m6bresc3[,1:200]+m6bresc3$clinordinal#
+# m6bresc3$clinordinal<-as.factor(m6bresc3$clinordinal<2.9)#
+# m6monz3$clinordinal<-as.factor(m6monz3$clinordinal<2.9)#
+# rf_classifier = #
+randomForest(clinordinal ~ ., data= m6bresc3, ntree=200, importance=TRUE)#
+comb<-rbind(m6bresc3 ,m6monz3[,colnames(m6bresc3)])
+prediction_for_roc_curve <- predict(rf_classifier, m6monz3[,-ncol(m6monz3)])
+plot(prediction_for_roc_curve, m6monz3$clinordinal)
+plot(prediction_for_roc_curve, m6monz3$clinordinal)
+head(m6bresc3)
+head(m6monz3)
+dim(m6bresc3)
+dim(m6monz3)
+predict(rf_classifier, m6monz3[,-ncol(m6monz3)])
+randomForest(clinordinal ~ ., data= m6bresc3,importance=TRUE)
+rf_classifier = randomForest(clinordinal ~ ., data= m6bresc3,importance=TRUE)
+prediction_for_roc_curve <- predict(rf_classifier, m6monz3[,-ncol(m6monz3)])#
+plot(prediction_for_roc_curve, m6monz3$clinordinal)
+# brescia:#
+library(ggplot2);library(lme4);library(lmerTest);library(plyr);library(stringr);library(RColorBrewer);library(Hmisc);library(viridis);library(vegan);library(phyloseq)#
+library(ggbeeswarm);library(ape)#
+tab1a<-read.table(file="~/Dropbox/post-doc/corona/200822 nextseq2_brescia2/seqtab_md5.xls",header=T,row.names=1,sep="\t")#
+tab1<-tab1a[,grep("blank",colnames(tab1a),invert=T)]#
+metadat1a<-read.csv("~/Dropbox/post-doc/corona/200801 nextseq run_brescia2/200803_map2b_excl.csv")#
+metadat<-subset(metadat1a,exclusion=="")#
+rownames(metadat)<-metadat$sampID#
+# colnames(tab1)[!colnames(tab1)%in%metadat$sampID]#
+colnames(tab1)<-gsub("neg","NP",colnames(tab1))#
+# metadat$sampID[!metadat$sampID%in%colnames(tab1)]
+plot(colSums(tab1),apply(tab1, 1, function(x) sum(x>0)))
+apply(tab1, 1, function(x) sum(x>0))
+plot(colSums(tab1),apply(tab1, 2, function(x) sum(x>0)))
+plot(colSums(tab1),colSums(tab1>0))
+plot(colSums(tab1),colSums(tab1>0))
+tab2<-tab1[rowSums(tab1)>sum(tab1)*0.00001,]#
+plot(colSums(tab1),colSums(tab1>0))#
+ps <- phyloseq(otu_table(t(tab2), taxa_are_rows = FALSE))#
+tab2rar<-t(rarefy_even_depth(ps,sample.size=200000,replace=F))#
+# S.hominis: f46a7ca244afef522b22a11bd33d27b1#
+tab3<-t(apply(tab2rar, 1,function(x) {x/as.numeric(colSums(tab2rar))}))#
+# # tab2<-tab1[rowSums(tab1)>sum(tab1)*0.00001,]#
+# # S.hominis: f46a7ca244afef522b22a11bd33d27b1#
+# tab3<-t(apply(tab2,1,function(x) {x/as.numeric(colSums(tab2))}))#
+# median(as.numeric(as.vector(tab3["f46a7ca244afef522b22a11bd33d27b1",])))#
+# colSums(tab3)#
+tab3shom<-apply(tab3,2,function(x) {x/x[rownames(tab3)=="f46a7ca244afef522b22a11bd33d27b1"]})#
+# colSums(tab3shom)#
+#
+logtab<-sqrt(tab3shom)#
+# high otu number means low IgG score#
+#
+# takes out samples from mapping file that are not in otu table#
+metadat2<-metadat[rownames(metadat)%in%colnames(logtab),]#
+logtab2<-logtab[,colnames(logtab)%in%rownames(metadat2)]#
+# logtab3<-t(apply(logtab2,1,function(x) mean(x[grep("NP",colnames(logtab2))],na.rm=TRUE)-x))#
+noabscores1<-logtab2[,grep("NP",colnames(logtab2))]#
+noabscores2<-apply(noabscores1, 1, function(x) mean(as.numeric(x)[is.finite(as.numeric(x))],na.rm=T))#
+logtab3b<-apply(logtab2, 2,function(x) (noabscores2-x))#
+#
+# remove duplicates:#
+hgridlist<-unique(subset(metadat2, class=="sample")$HGRid)#
+hgridlist<-hgridlist[!hgridlist%in%""]#
+logtab3<-matrix(nrow=nrow(logtab3b),ncol= length(hgridlist))#
+colnames(logtab3)<-hgridlist#
+rownames(logtab3)<-rownames(logtab3b)#
+for(i in 1:length(hgridlist))#
+{#
+	subj<-as.vector(hgridlist[i])#
+	temptab<-logtab3b[,rownames(subset(metadat2,HGRid==subj))]#
+	if(length(temptab)>nrow(logtab3)){#
+	logtab3[,i]<-apply(temptab,1,mean)#
+	} else {#
+		logtab3[,i]<-temptab#
+	}#
+}#
+logtab3<-logtab3[,!colnames(logtab3)%in%"HGR0000385"]#
+library(ggplot2)#
+map<-read.csv(file="~/Dropbox/post-doc/corona/200801 nextseq run_brescia2/200803_map2b_excl.csv")#
+#
+demos<-read.csv(file="~/Dropbox/post-doc/corona/200725_brescia_data_labkey/Demographics_2020-07-25_16-26-34.csv")#
+labs<-read.csv(file="~/Dropbox/post-doc/corona/200725_brescia_data_labkey/Clinical Labs Wide_2020-07-25_16-29-01.csv")#
+colnames(map)<-gsub("HGRid","HGRepo.ID",colnames(map))#
+#
+m1<-merge(map,demos,by="HGRepo.ID",all.x=T)#
+m2<-as.data.frame(m1)#
+m2$clinICUdeath<-as.vector(m1 $Clinical.Definition)#
+m2$Clinical.Definition[is.na(m2$Clinical.Definition)]<-""#
+m2$clinICUdeath[m2 $Death=="Deceased"]<-"Deceased"#
+m2$clinICUdeath[m2 $Clinical.Definition =="Critical"&m2 $Death !="Deceased"]<-paste(m2 $Clinical.Definition[m2 $Clinical.Definition =="Critical"&m2 $Death !="Deceased"], m2 $ICU.or.non.ICU[m2 $Clinical.Definition =="Critical"&m2 $Death !="Deceased"],sep="_")#
+# m2$clinICUdeath[m2$Final.COVID.19.Status=="Negative"]#
+#
+m2$clinordinal<-m2$clinICUdeath#
+m2$clinordinal<-gsub("Mild",1,m2$clinordinal)#
+m2$clinordinal<-gsub("Moderate",2,m2$clinordinal)#
+m2$clinordinal<-gsub("Severe",3,m2$clinordinal)#
+m2$clinordinal<-gsub("Critical_non-ICU",4,m2$clinordinal)#
+m2$clinordinal<-gsub("Critical_ICU",4,m2$clinordinal)#
+m2$clinordinal<-gsub("Deceased",5,m2$clinordinal)#
+m2<-subset(m2,Final.COVID.19.Status=="Positive")#
+#
+m2 $clinICUdeath <-factor(m2 $clinICUdeath,levels=c("Mild","Moderate","Severe","Critical_non-ICU","Critical_ICU","Deceased"))#
+ggplot(m2,aes(x= clinICUdeath,y=Age))+geom_boxplot(outlier.size=-1)+geom_jitter(height=0,width=0.2,alpha=0.2,size=1)+scale_y_continuous(breaks=c(2:8*10))+theme_bw()+ theme(axis.text.x = element_text(angle = 90,hjust=1,vjust=0.5),plot.title = element_text(size=9))+xlab("")+ylab("Age (years)")#
+#
+m2$clinordinal<-as.numeric(m2$clinordinal)#
+rownames(m2)<-m2$sampID#
+logtab4<-t(logtab3)#
+logtab5<-as.data.frame(cbind(logtab4,HGRepo.ID=rownames(logtab4)))#
+m2b<-m2[match(rownames(logtab4),m2$HGRepo.ID),]#
+m3a<-merge(logtab5,m2b,by="HGRepo.ID")#
+m3<-m3a[,c(2:ncol(m3a),1)]#
+#
+m4<-subset(m3,clinordinal>(-1))#
+colnames(m4)[1:length(rownames(logtab3))]<-paste("X",colnames(m4)[1:length(rownames(logtab3))],sep="")#
+i<-0#
+#
+i<-i+1;m5bresc<-m4
+# colnames(m5bresc)[grep("X",colnames(m5bresc))]#
+m6bresc<-m5bresc[,c(colnames(m5bresc)[grep("X",colnames(m5bresc))],"clinordinal")]#
+m6bresc<-m6bresc[,!colnames(m6bresc)%in%"X"]#
+# m6bresc $clinordinal<-sample(m6bresc $clinordinal,size=nrow(m6bresc))#
+# colnames(m5monz)[grep("X",colnames(m5monz))]#
+m6monz<-m5monz[,c(colnames(m5monz)[grep("X",colnames(m5monz))],"clinordinal")]#
+m6monz<-m6monz[,!colnames(m6monz)%in%"X"]#
+m6monz2<-m6monz[,colnames(m6monz)%in%colnames(m6bresc)]#
+m6bresc2<-m6bresc[,colnames(m6bresc)%in%colnames(m6monz2)]#
+m6bresc3<-as.data.frame(m6bresc2)#[,c(1:350,ncol(m6bresc2))]#
+for(i in 1:ncol(m6bresc3))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}#
+m6monz3<-as.data.frame(m6monz2)#
+for(i in 1:(ncol(m6monz3)-1))#
+{#
+	m6monz3[,i]<-as.numeric(m6monz3[,i])#
+}#
+ # m6bresc3[,1:200]<-m6bresc3[,1:200]+m6bresc3$clinordinal#
+# m6bresc3$clinordinal<-as.factor(m6bresc3$clinordinal<2.9)#
+# m6monz3$clinordinal<-as.factor(m6monz3$clinordinal<2.9)#
+rf_classifier = randomForest(clinordinal ~ ., data= m6bresc3,importance=TRUE)
+rf_classifier
+m6bresc3$clinordinal
+prediction_for_roc_curve <- predict(rf_classifier, m6monz3[,-ncol(m6monz3)])
+plot(prediction_for_roc_curve, m6monz3$clinordinal)
+m6bresc4<-m6bresc3
+m6bresc4 $clinordinal<-sample(m6bresc4 $clinordinal,size=nrow(m6bresc4))
+randomForest(clinordinal ~ ., data= m6bresc3,importance=TRUE)
+randomForest(clinordinal ~ ., data= m6bresc4,importance=TRUE)
+randomForest(clinordinal ~ ., data= m6bresc4,importance=TRUE)
+randomForest(clinordinal ~ ., data= m6bresc4,importance=TRUE)
+randomForest(clinordinal ~ ., data= m6bresc3,importance=TRUE)
+randomForest(clinordinal ~ ., data= m6bresc3,importance=TRUE)
+rf_classifier = randomForest(clinordinal ~ ., data= m6bresc3,importance=TRUE)
+colnames(m5bresc)
+m6bresc<-m5bresc[,c(colnames(m5bresc)[grep("X",colnames(m5bresc))],"Age","Sex","clinordinal")]#
+m6bresc<-m6bresc[,!colnames(m6bresc)%in%"X"]#
+# m6bresc $clinordinal<-sample(m6bresc $clinordinal,size=nrow(m6bresc))#
+# colnames(m5monz)[grep("X",colnames(m5monz))]#
+m6monz<-m5monz[,c(colnames(m5monz)[grep("X",colnames(m5monz))],"clinordinal")]#
+m6monz<-m6monz[,!colnames(m6monz)%in%"X"]#
+m6monz2<-m6monz[,colnames(m6monz)%in%colnames(m6bresc)]#
+m6bresc2<-m6bresc[,colnames(m6bresc)%in%colnames(m6monz2)]#
+m6bresc3<-as.data.frame(m6bresc2)#[,c(1:350,ncol(m6bresc2))]#
+for(i in 1:ncol(m6bresc3))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}#
+m6monz3<-as.data.frame(m6monz2)#
+for(i in 1:(ncol(m6monz3)-1))#
+{#
+	m6monz3[,i]<-as.numeric(m6monz3[,i])#
+}#
+ # m6bresc3[,1:200]<-m6bresc3[,1:200]+m6bresc3$clinordinal#
+# m6bresc3$clinordinal<-as.factor(m6bresc3$clinordinal<2.9)#
+# m6monz3$clinordinal<-as.factor(m6monz3$clinordinal<2.9)#
+# rf_classifier = #
+m6bresc4<-m6bresc3#
+m6bresc4 $clinordinal<-sample(m6bresc4 $clinordinal,size=nrow(m6bresc4))#
+rf_classifier = randomForest(clinordinal ~ ., data= m6bresc3,importance=TRUE)
+rf_classifier
+head(m6bresc3)
+colnames(m5bresc)
+head(m6bresc)
+head(m6bresc3)
+# colnames(m5bresc)[grep("X",colnames(m5bresc))]#
+m6bresc<-m5bresc[,c(colnames(m5bresc)[grep("X",colnames(m5bresc))],"Age","Sex","clinordinal")]#
+m6bresc<-m6bresc[,!colnames(m6bresc)%in%"X"]#
+# m6bresc $clinordinal<-sample(m6bresc $clinordinal,size=nrow(m6bresc))#
+# colnames(m5monz)[grep("X",colnames(m5monz))]#
+m6monz<-m5monz[,c(colnames(m5monz)[grep("X",colnames(m5monz))],"Age","Sex","clinordinal")]#
+m6monz<-m6monz[,!colnames(m6monz)%in%"X"]#
+m6monz2<-m6monz[,colnames(m6monz)%in%colnames(m6bresc)]#
+m6bresc2<-m6bresc[,colnames(m6bresc)%in%colnames(m6monz2)]#
+m6bresc3<-as.data.frame(m6bresc2)#[,c(1:350,ncol(m6bresc2))]#
+for(i in 1:ncol(m6bresc3))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}#
+m6monz3<-as.data.frame(m6monz2)#
+for(i in 1:(ncol(m6monz3)-1))#
+{#
+	m6monz3[,i]<-as.numeric(m6monz3[,i])#
+}#
+ # m6bresc3[,1:200]<-m6bresc3[,1:200]+m6bresc3$clinordinal#
+# m6bresc3$clinordinal<-as.factor(m6bresc3$clinordinal<2.9)#
+# m6monz3$clinordinal<-as.factor(m6monz3$clinordinal<2.9)#
+# rf_classifier = #
+m6bresc4<-m6bresc3#
+m6bresc4 $clinordinal<-sample(m6bresc4 $clinordinal,size=nrow(m6bresc4))#
+rf_classifier = randomForest(clinordinal ~ ., data= m6bresc3,importance=TRUE)
+for(i in 1:ncol(m6bresc3))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}
+m6bresc3<-as.data.frame(m6bresc2)#[,c(1:350,ncol(m6bresc2))]#
+for(i in 1:ncol(m6bresc3))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}
+i
+head(m6bresc3)
+m6bresc3<-as.data.frame(m6bresc2)#[,c(1:350,ncol(m6bresc2))]#
+for(i in 1:ncol(m6bresc3))#
+{#
+	m6bresc3[,i]<-as.numeric(as.vector(m6bresc3[,i]))#
+}
+head(m6bresc3)
+m6bresc2<-m6bresc[,colnames(m6bresc)%in%colnames(m6monz2)]
+head(m6bresc2)
+as.numeric(as.vector(m6bresc3[,i]))
+as.numeric(as.vector(m6bresc3[,i-1]))
+as.numeric(as.vector(m6bresc2[,i-1]))
+as.numeric(as.factor(m6bresc2[,i-1]))
+as.numeric(as.factor(m6bresc2[,i-2]))
+as.numeric(as.factor(m6bresc2[,i-3]))
+as.numeric(as.factor(m6bresc2[,i-4]))
+m6bresc3$Age<-as.numeric(as.factor(m6bresc2$Age))
+m6bresc<-m6bresc[,!colnames(m6bresc)%in%"X"]#
+# m6bresc $clinordinal<-sample(m6bresc $clinordinal,size=nrow(m6bresc))#
+# colnames(m5monz)[grep("X",colnames(m5monz))]#
+m6monz<-m5monz[,c(colnames(m5monz)[grep("X",colnames(m5monz))],"Age","Sex","clinordinal")]#
+m6monz<-m6monz[,!colnames(m6monz)%in%"X"]#
+m6monz2<-m6monz[,colnames(m6monz)%in%colnames(m6bresc)]#
+m6bresc2<-m6bresc[,colnames(m6bresc)%in%colnames(m6monz2)]#
+m6bresc3<-as.data.frame(m6bresc2)#[,c(1:350,ncol(m6bresc2))]#
+for(i in 1:ncol(m6bresc3))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}#
+m6bresc3$Age<-as.numeric(as.factor(m6bresc2$Age))#
+m6monz3<-as.data.frame(m6monz2)#
+for(i in 1:(ncol(m6monz3)-1))#
+{#
+	m6monz3[,i]<-as.numeric(m6monz3[,i])#
+}#
+ # m6bresc3[,1:200]<-m6bresc3[,1:200]+m6bresc3$clinordinal#
+# m6bresc3$clinordinal<-as.factor(m6bresc3$clinordinal<2.9)#
+# m6monz3$clinordinal<-as.factor(m6monz3$clinordinal<2.9)#
+# rf_classifier = #
+m6bresc4<-m6bresc3#
+m6bresc4 $clinordinal<-sample(m6bresc4 $clinordinal,size=nrow(m6bresc4))#
+rf_classifier = randomForest(clinordinal ~ ., data= m6bresc3,importance=TRUE)
+m6bresc3$Age
+head(m6bresc3)
+m6bresc3$Age
+m6bresc<-m5bresc[,c(colnames(m5bresc)[grep("X",colnames(m5bresc))],"Age","Sex","clinordinal")]#
+m6bresc<-m6bresc[,!colnames(m6bresc)%in%"X"]#
+# m6bresc $clinordinal<-sample(m6bresc $clinordinal,size=nrow(m6bresc))#
+# colnames(m5monz)[grep("X",colnames(m5monz))]#
+m6monz<-m5monz[,c(colnames(m5monz)[grep("X",colnames(m5monz))],"Age","Sex","clinordinal")]#
+m6monz<-m6monz[,!colnames(m6monz)%in%"X"]#
+m6monz2<-m6monz[,colnames(m6monz)%in%colnames(m6bresc)]#
+m6bresc2<-m6bresc[,colnames(m6bresc)%in%colnames(m6monz2)]#
+m6bresc3<-as.data.frame(m6bresc2)#[,c(1:350,ncol(m6bresc2))]#
+for(i in 1:ncol(m6bresc3))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}#
+m6bresc3$Sex<-as.numeric(as.factor(m6bresc2$Sex))#
+m6monz3<-as.data.frame(m6monz2)#
+for(i in 1:(ncol(m6monz3)-1))#
+{#
+	m6monz3[,i]<-as.numeric(m6monz3[,i])#
+}#
+ # m6bresc3[,1:200]<-m6bresc3[,1:200]+m6bresc3$clinordinal#
+# m6bresc3$clinordinal<-as.factor(m6bresc3$clinordinal<2.9)#
+# m6monz3$clinordinal<-as.factor(m6monz3$clinordinal<2.9)#
+# rf_classifier = #
+m6bresc4<-m6bresc3#
+m6bresc4 $clinordinal<-sample(m6bresc4 $clinordinal,size=nrow(m6bresc4))#
+rf_classifier = randomForest(clinordinal ~ ., data= m6bresc3,importance=TRUE)
+rf_classifier
+m6bresc<-m5bresc[,c(colnames(m5bresc)[grep("X",colnames(m5bresc))],"Age","Sex","clinordinal")]#
+m6bresc<-m6bresc[,!colnames(m6bresc)%in%"X"]#
+# m6bresc $clinordinal<-sample(m6bresc $clinordinal,size=nrow(m6bresc))#
+# colnames(m5monz)[grep("X",colnames(m5monz))]#
+m6monz<-m5monz[,c(colnames(m5monz)[grep("X",colnames(m5monz))],"Age","Sex","clinordinal")]#
+m6monz<-m6monz[,!colnames(m6monz)%in%"X"]#
+m6monz2<-m6monz[,colnames(m6monz)%in%colnames(m6bresc)]#
+m6bresc2<-m6bresc[,colnames(m6bresc)%in%colnames(m6monz2)]#
+m6bresc3<-as.data.frame(m6bresc2)#[,c(1:350,ncol(m6bresc2))]#
+for(i in 1:ncol(m6bresc3))#
+{#
+	m6bresc3[,i]<-as.numeric(m6bresc3[,i])#
+}#
+m6bresc3$Sex<-as.numeric(as.factor(m6bresc2$Sex))#
+m6monz3<-as.data.frame(m6monz2)#
+for(i in 1:(ncol(m6monz3)-1))#
+{#
+	m6monz3[,i]<-as.numeric(m6monz3[,i])#
+}#
+m6monz3 $Sex<-as.numeric(as.factor(m6monz3 $Sex))#
+ # m6bresc3[,1:200]<-m6bresc3[,1:200]+m6bresc3$clinordinal#
+# m6bresc3$clinordinal<-as.factor(m6bresc3$clinordinal<2.9)#
+# m6monz3$clinordinal<-as.factor(m6monz3$clinordinal<2.9)#
+# rf_classifier = #
+m6bresc4<-m6bresc3#
+m6bresc4 $clinordinal<-sample(m6bresc4 $clinordinal,size=nrow(m6bresc4))#
+rf_classifier = randomForest(clinordinal ~ ., data= m6bresc3,importance=TRUE)#
+# comb<-rbind(m6bresc3 ,m6monz3[,colnames(m6bresc3)])#
+#
+library(ROCR)#
+#
+# Calculate the probability of new observations belonging to each class#
+# prediction_for_roc_curve will be a matrix with dimensions data_set_size x number_of_classes#
+prediction_for_roc_curve <- predict(rf_classifier, m6monz3[,-ncol(m6monz3)])
+prediction_for_roc_curve <- predict(rf_classifier, m6monz3[,-ncol(m6monz3)])
+plot(prediction_for_roc_curve, m6monz3$clinordinal)
+plot(prediction_for_roc_curve, m6monz3$clinordinal)
+prediction_for_roc_curve
+head(m6monz3)
+m6monz3 $Sex
+m6monz3<-as.data.frame(m6monz2)#
+for(i in 1:(ncol(m6monz3)-1))#
+{#
+	m6monz3[,i]<-as.numeric(m6monz3[,i])#
+}#
+m6monz3 $Sex<-as.numeric(as.factor(m6monz3 $Sex))
+m6monz3 $Sex
+m6monz3 $Sex<-as.numeric(as.factor(m6monz2 $Sex))
+m6bresc4<-m6bresc3#
+m6bresc4 $clinordinal<-sample(m6bresc4 $clinordinal,size=nrow(m6bresc4))#
+rf_classifier = randomForest(clinordinal ~ ., data= m6bresc3,importance=TRUE)#
+# comb<-rbind(m6bresc3 ,m6monz3[,colnames(m6bresc3)])#
+#
+library(ROCR)#
+#
+# Calculate the probability of new observations belonging to each class#
+# prediction_for_roc_curve will be a matrix with dimensions data_set_size x number_of_classes#
+prediction_for_roc_curve <- predict(rf_classifier, m6monz3[,-ncol(m6monz3)])#
+plot(prediction_for_roc_curve, m6monz3$clinordinal)
+rf_classifier
+randomForest(clinordinal ~ ., data= m6bresc3,importance=TRUE)
+randomForest(clinordinal ~ ., data= m6bresc3,importance=TRUE)
+randomForest(clinordinal ~ ., data= m6bresc3,importance=TRUE)
+randomForest(clinordinal ~ ., data= m6bresc4,importance=TRUE)
+randomForest(clinordinal ~ ., data= m6bresc4,importance=TRUE)
+randomForest(clinordinal ~ ., data= m6bresc4,importance=TRUE)
+rf_classifier = randomForest(clinordinal ~ ., data= m6bresc3,importance=TRUE)
+attributes(rf_classifier)
+rf_classifier$importance
+rf_classifier$importance[order(rf_classifier$importance)]
+rf_classifier[order(rf_classifier$importance)]
+rf_classifier$importance[order(rf_classifier$importance)]
+rf_classifier$importance
+rf_classifier$importance
+rownames(rf_classifier$importance)
+rownames(rf_classifier$importance)[order(rf_classifier$importance)]
+order(rf_classifier$importance)
+rownames(rf_classifier$importance)
+order(rf_classifier$importance)
+rownames(rf_classifier$importance)[order(rf_classifier$importance[,1])]
+rownames(rf_classifier$importance)[order(rf_classifier$importance[,1])]
+rf_classifier$importance
+rf_classifier$importance
+rf_classifier$importance[order(rf_classifier$importance[,1]),]
+rf_classifier$importance[order(rf_classifier$importance[,1]),]
+write.csv(rf_classifier$importance[order(rf_classifier$importance[,1],decreasing=T),],file="~/Dropbox/post-doc/corona/200822 nextseq2_brescia2/rf_brescia.csv")
+rf_classifier = randomForest(clinordinal ~ ., data= m6monz3,importance=TRUE)
+rf_classifier
+rf_classifier = randomForest(clinordinal ~ ., data= m6monz3,importance=TRUE)
+rf_classifier
+m6monz4<-m6monz3
+m6monz4 $clinordinal<-sample(m6monz4 $clinordinal,size=nrow(m6monz4))
+randomForest(clinordinal ~ ., data= m6monz4,importance=TRUE)
+randomForest(clinordinal ~ ., data= m6monz4,importance=TRUE)
+randomForest(clinordinal ~ ., data= m6monz4,importance=TRUE)
+rf_classifier = randomForest(clinordinal ~ ., data= m6bresc3,importance=TRUE)
+rf_classifier
+m6monz4 $clinordinal<-sample(m6monz4 $clinordinal,size=nrow(m6monz4))
+randomForest(clinordinal ~ ., data= m6monz4,importance=TRUE)
+randomForest(clinordinal ~ ., data= m6monz4,importance=TRUE)
+randomForest(clinordinal ~ ., data= m6monz3,importance=TRUE)
+randomForest(clinordinal ~ ., data= m6monz3,importance=TRUE)
+rf_classifier =randomForest(clinordinal ~ ., data= m6monz3,importance=TRUE)
+rf_classifier$importance[order(rf_classifier$importance[,1],decreasing=T),]
+write.csv(rf_classifier$importance[order(rf_classifier$importance[,1],decreasing=T),],file="/Users/Wolfe/Dropbox/post-doc/corona/210210 monza_16s/rf_monza.csv")
+rf_classifier$importance[order(rf_classifier$importance[,1],decreasing=T),]
+rf_classifier$importance[order(rf_classifier$importance[,1],decreasing=T),]
+library(ggplot2);library(lme4);library(lmerTest);library(plyr);library(stringr);library(RColorBrewer);library(Hmisc);library(viridis);library(vegan);library(phyloseq)#
+library(ggbeeswarm);library(ape)#
+tab1a<-read.table(file="~/Dropbox/post-doc/corona/210210 monza_16s/seqtab_md5.xls",header=T,row.names=1,sep="\t")#
+colnames(tab1a)[substr(colnames(tab1a),0,1)=="X"]<-gsub("X","",colnames(tab1a)[substr(colnames(tab1a),0,1)=="X"])#
+tab1<-tab1a[,grep("blank",colnames(tab1a),invert=T)]#
+# tab1<-tab1[,!colnames(tab1)%in%c("S1A3B","S1A4B","S1A7B")]#
+metadat<-read.csv("~/Dropbox/post-doc/corona/210210 monza_16s/210211_monza_platemap.csv")#
+metadat$sampid[match(colnames(tab1),metadat$sampid)]==colnames(tab1)#
+colnames(tab1)<-metadat$actualID[match(colnames(tab1),metadat$sampid)]#
+#
+# NEED TO LOOK INTO MEDICATIONS FOR EXCLUSION:#
+# metadat<-subset(metadat1a,exclusion=="")#
+rownames(metadat)<-metadat$actualID#
+# colnames(tab1)[!colnames(tab1)%in%metadat$sampID]#
+# colnames(tab1)<-gsub("neg","NP",colnames(tab1))#
+# metadat$sampID[!metadat$sampID%in%colnames(tab1)]#
+tab2<-tab1[rowSums(tab1)>sum(tab1)*0.00001,]#
+plot(colSums(tab1),colSums(tab1>0))#
+ps <- phyloseq(otu_table(t(tab2), taxa_are_rows = FALSE))#
+tab2rar<-t(rarefy_even_depth(ps,sample.size=200000,replace=F))#
+# S.hominis: f46a7ca244afef522b22a11bd33d27b1#
+tab3<-t(apply(tab2rar, 1,function(x) {x/as.numeric(colSums(tab2rar))}))#
+colSums(tab3)#
+tab3shom<-apply(tab3,2 ,function(x) {x/x[rownames(tab3)=="f46a7ca244afef522b22a11bd33d27b1"]})#
+# colSums(tab3shom)#
+plot(sqrt(tab3shom[,1]),log(tab3shom[,1]))#
+asinsqrt<- function(x) {asin(sqrt(x))}#
+plot(sqrt(tab3shom[,1]),(tab3shom[,1]))#
+logtab<-sqrt(tab3shom)#
+# logtab<-log(tab3shom+min(tab3shom[tab3shom>0]),base=2)#
+# high otu number means low IgG score#
+#
+# takes out samples from mapping file that are not in otu table#
+metadat2<-metadat[rownames(metadat)%in%colnames(logtab),]#
+logtab2<-logtab[,colnames(logtab)%in%rownames(metadat2)]#
+# logtab3<-t(apply(logtab2,1,function(x) mean(x[grep("NP",colnames(logtab2))],na.rm=TRUE)-x))#
+noabscores1<-logtab2[,grep("noAb",colnames(logtab2))]#
+noabscores2<-apply(noabscores1, 1, function(x) mean(as.numeric(x)[is.finite(as.numeric(x))],na.rm=T))#
+logtab3b<-apply(logtab2, 2,function(x) (noabscores2-x))#
+#
+# remove duplicates:#
+hgridlist<-unique(subset(metadat2, mab!="")$mab_fordup)#
+hgridlist<-hgridlist[!hgridlist%in%""]#
+logtab3<-matrix(nrow=nrow(logtab3b),ncol= length(hgridlist))#
+colnames(logtab3)<-hgridlist#
+rownames(logtab3)<-rownames(logtab3b)#
+for(i in 1:length(hgridlist))#
+{#
+	subj<-as.vector(hgridlist[i])#
+	temptab<-logtab3b[,rownames(subset(metadat2, mab_fordup ==subj))]#
+	if(length(temptab)>nrow(logtab3)){#
+	logtab3[,i]<-apply(temptab,1,mean)#
+	} else {#
+		logtab3[,i]<-temptab#
+	}#
+}#
+logtab3<-logtab3[,!colnames(logtab3)%in%"HGR0000654"]#
+# logtab3exclu<-logtab3#
+# plot(logtab3exclu["43ba89eb9bd003fee537b2f2ccc3a1c3",], logtab3noexclu["43ba89eb9bd003fee537b2f2ccc3a1c3",])#
+library(ggplot2)#
+#
+ metadat2$mab_dilnum<-gsub("iv",4, metadat2$mab_dil)#
+ metadat2$mab_dilnum<-gsub("iii",3, metadat2$mab_dilnum)#
+ metadat2$mab_dilnum<-gsub("ii",2, metadat2$mab_dilnum)#
+ metadat2$mab_dilnum<-gsub("i",1, metadat2$mab_dilnum)#
+ metadat2$mab_dilnum<-as.numeric( metadat2$mab_dilnum)#
+# demos<-read.csv(file="~/Dropbox/post-doc/corona/210210 monza_16s/monza_demos_clinsev.csv")#
+# colnames(map)<-gsub("sampid","wrongsampid",colnames(map))#
+# colnames(map)<-gsub("wrongsampid5","sampid",colnames(map))#
+# m1<-merge(map,demos,by="sampid",all.x=T)#
+# m2<-as.data.frame(m1)#
+# rownames(m2)<-m2$sampID#
+logtab4<-t(logtab3)#
+colnames(logtab4)<-paste("X",colnames(logtab4),sep="")#
+logtab5<-as.data.frame(cbind(logtab4,mab_fordup=rownames(logtab4)))#
+m2b<-metadat2[match(rownames(logtab4), metadat2 $mab_fordup),]#
+m3a<-merge(logtab5,m2b,by="mab_fordup")#
+ ggplot(m3a,aes(x= mab_dilnum,y= as.numeric(as.vector(X16cc2497833ec315fce020c74c525e2f))))+geom_point(size=3)+theme_bw()+ theme(axis.text.x = element_text(angle = 90,hjust=1,vjust=0.5),plot.title = element_text(size=9))+xlab("")+facet_wrap(.~mab)#
++geom_smooth(method="lm",colour="black",alpha=0.4,fill="blue")#
+ +geom_text(aes(label=sampID),hjust=2, vjust=0)#
++ylab(rownames(wilxmat)[i])
+ggplot(m3a,aes(x= mab_dilnum,y= as.numeric(as.vector(X16cc2497833ec315fce020c74c525e2f))))+geom_point(size=3)+theme_bw()+ theme(axis.text.x = element_text(angle = 90,hjust=1,vjust=0.5),plot.title = element_text(size=9))+xlab("")+facet_wrap(.~mab)
+ggplot(m3a,aes(x= mab_dilnum,y= as.numeric(as.vector(X03cbf0af7ffe718ca23f68a2c776c88c))))+geom_point(size=3)+theme_bw()+ theme(axis.text.x = element_text(angle = 90,hjust=1,vjust=0.5),plot.title = element_text(size=9))+xlab("")+facet_wrap(.~mab)
+head(metadat2)
+cbind(metadat2$actualID, metadat2$mab_fordup)
+m6monz2<-cbind(m6monz[,colnames(m6monz)%in%colnames(m6bresc)],mobr="monza"
+m6bresc2<-cbind(m6bresc[,colnames(m6bresc)%in%colnames(m6monz2)],mobr="brescia")
+m6monz2b<-cbind(m6monz[,colnames(m6monz)%in%colnames(m6bresc)],mobr="monza"
+m6bresc2b<-cbind(m6bresc[,colnames(m6bresc)%in%colnames(m6monz2)],mobr="brescia")
+comb<-rbind(m6bresc2b ,m6monz2b[,colnames(m6bresc2b)])
+m6monz2b<-cbind(m6monz[,colnames(m6monz)%in%colnames(m6bresc)],mobr="monza")
+m6bresc2b<-cbind(m6bresc[,colnames(m6bresc)%in%colnames(m6monz2)],mobr="brescia")
+comb<-rbind(m6bresc2b ,m6monz2b[,colnames(m6bresc2b)])
+colnames(m6bresc2b)
+colnames(m6monz2b)
+colnames(m6bresc2b)
+colnames(m6monz2b)
+colnames(m6bresc2b)
+colnames(m6monz2b[,colnames(m6bresc2b)])
+colnames(m6bresc2b)
+colnames(m6monz2b[,colnames(m6bresc2b)])
+colnames(m6bresc2b)
+rownames(comb)
+rownames(m6monz)
+head(m6monz)
+colnames(m5monz)
+metadat$sampid[match(colnames(tab1),metadat$sampid)]==colnames(tab1)
+# monza for comp to brescia:#
+tab1a<-read.table(file="~/Dropbox/post-doc/corona/210210 monza_16s/seqtab_md5.xls",header=T,row.names=1,sep="\t")#
+colnames(tab1a)[substr(colnames(tab1a),0,1)=="X"]<-gsub("X","",colnames(tab1a)[substr(colnames(tab1a),0,1)=="X"])#
+tab1<-tab1a[,grep("blank",colnames(tab1a),invert=T)]#
+# tab1<-tab1[,!colnames(tab1)%in%c("S1A3B","S1A4B","S1A7B")]#
+metadat<-read.csv("~/Dropbox/post-doc/corona/210210 monza_16s/210211_monza_platemap.csv")#
+metadat$sampid[match(colnames(tab1),metadat$sampid)]==colnames(tab1)
+metadat$actualID[match(colnames(tab1),metadat$sampid)]==colnames(tab1)
+match(colnames(tab1)
+colnames(tab1)
+colnames(tab1)
+colnames(tab1)[1]
+colnames(tab1)[10]
+colnames(tab1)[100]
+match(colnames(tab1),metadat$sampid)[100]
+metadat$sampid[100]
+metadat$sampid[212]
+head(m5bresc)
+(m5bresc)
+(m5bresc)
+tab1a<-read.table(file="~/Dropbox/post-doc/corona/210210 monza_16s/seqtab_md5.xls",header=T,row.names=1,sep="\t")
+colnames(tab1a)
+colnames(tab1a)
+colnames(tab1a)[substr(colnames(tab1a),0,1)=="X"]<-gsub("X","",colnames(tab1a)[substr(colnames(tab1a),0,1)=="X"])
+colnames(tab1a)
+library(ggplot2);library(lme4);library(lmerTest);library(plyr);library(stringr);library(RColorBrewer);library(Hmisc);library(viridis);library(vegan);library(phyloseq)
+mfcagp<-read.table("~/Dropbox/post-doc/collaborations/190208_sklar_aging_microbiome/190618 alcfreq_in_Ornella/agp_fconcatgen_dailyvnever.xls_BH.xls",sep="\t",header=T,row.names=1)#
+mfcorn<-read.table("~/Dropbox/post-doc/collaborations/190208_sklar_aging_microbiome/190618 alcfreq_in_Ornella/nonMSM_dailyweekly-vs-neverlessthanmonthmonthly_alcofreq_10pct_fconcatgen_252nt.xls_BH.xls",header=T,sep="\t",row.names=1)#
+#
+both<-merge(mfcorn, mfcagp,by=0)
+head(both)
+dim(both)
+both2<-subset(both, numnonzero.x>15)
+dim(both2)
+head(mfcorn)
+head(mfcagp)
+library(ggplot2);library(Hmisc)#
+mfcagp<-read.table("~/Dropbox/post-doc/collaborations/190208_sklar_aging_microbiome/191125 south china cohort/200206 agp v china_bmq/SC_solidvnorm_fconcatgen.xls_BH.xls",sep="\t",header=T,row.names=1)#
+mfcorn<-read.table("~/Dropbox/post-doc/collaborations/190208_sklar_aging_microbiome/191125 south china cohort/200206 agp v china_bmq/agp_bmqsolid_fconcatgen.xls_BH.xls",header=T,sep="\t",row.names=1)#
+#
+both<-merge(mfcorn, mfcagp,by=0)
+dim(both)
+dim(mfcagp)
+dim(mfcorn)
+mfcagp<-read.table("~/Dropbox/post-doc/collaborations/190208_sklar_aging_microbiome/190618 alcfreq_in_Ornella/agp_fconcatgen_dailyvnever.xls_BH.xls",sep="\t",header=T,row.names=1)#
+mfcorn<-read.table("~/Dropbox/post-doc/collaborations/190208_sklar_aging_microbiome/190618 alcfreq_in_Ornella/nonMSM_dailyweekly-vs-neverlessthanmonthmonthly_alcofreq_10pct_fconcatgen_252nt.xls_BH.xls",header=T,sep="\t",row.names=1)
+dim(mfcagp)
+dim(mfcorn)
+both<-merge(mfcorn, mfcagp,by=0)
+dim(both)
+mfcagp[,1]
+rownames(mfcagp)
+rownames(mfcorn)
